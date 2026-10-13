@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host
+Host: https://navnath-portfolio.vercel.app/
+
+# Sitemaps
+Sitemap: https://navnath-portfolio.vercel.app/sitemap.xml

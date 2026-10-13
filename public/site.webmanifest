@@ -1,0 +1,17 @@
+{
+  "name": "Navnath Bandgar | Full Stack Developer",
+  "short_name": "Navnath Bandgar",
+  "description": "Portfolio of Navnath Bandgar, Full Stack Developer in Pune specializing in React.js, Next.js, and TypeScript.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
