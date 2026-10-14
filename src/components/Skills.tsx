@@ -49,12 +49,12 @@ export const Skills: React.FC = () => {
           </p>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 pt-4">
             {filterTabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setSelectedFilter(tab)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
                   selectedFilter === tab
                     ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md shadow-purple-600/25 border border-purple-400/30'
                     : 'bg-slate-900/60 text-slate-300 hover:text-white hover:bg-slate-800/80 border border-slate-800'
@@ -67,13 +67,13 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredCategories.map((category) => {
             const Icon = categoryIcons[category.title] || Code;
             return (
               <div
                 key={category.title}
-                className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-7 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between"
+                className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-5 sm:p-7 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between"
               >
                 <div>
                   {/* Category Header */}

@@ -184,21 +184,21 @@ export const Projects: React.FC = () => {
             <div
               ref={scrollContainerRef}
               onScroll={handleScroll}
-              className="flex gap-6 overflow-x-auto pb-6 pt-2 scroll-smooth snap-x snap-mandatory scrollbar-thin scrollbar-thumb-purple-900/60 scrollbar-track-slate-950"
+              className="flex gap-4 sm:gap-6 overflow-x-auto pb-6 pt-2 scroll-smooth snap-x snap-mandatory scrollbar-thin scrollbar-thumb-purple-900/60 scrollbar-track-slate-950"
               style={{ scrollbarWidth: 'thin' }}
             >
               {filteredProjects.map((project, idx) => (
                 <div
                   key={project.id}
-                  className="w-[88vw] sm:w-[420px] lg:w-[440px] shrink-0 snap-start rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 relative overflow-hidden"
+                  className="w-[86vw] sm:w-[380px] md:w-[400px] lg:w-[440px] shrink-0 snap-start rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 relative overflow-hidden"
                 >
                   {/* Subtle index watermark */}
-                  <div className="absolute top-3 right-4 text-4xl font-black text-slate-800/40 font-mono select-none pointer-events-none group-hover:text-purple-500/10 transition-colors">
+                  <div className="absolute top-3 right-4 text-3xl sm:text-4xl font-black text-slate-800/40 font-mono select-none pointer-events-none group-hover:text-purple-500/10 transition-colors">
                     #{String(idx + 1).padStart(2, '0')}
                   </div>
 
                   {/* Card Upper Section */}
-                  <div className="p-6 sm:p-7 space-y-4">
+                  <div className="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
                     {/* Category & Status */}
                     <div className="flex items-center justify-between gap-2">
                       <span
@@ -254,7 +254,7 @@ export const Projects: React.FC = () => {
                   </div>
 
                   {/* Card Footer: Tech tags & Action */}
-                  <div className="p-6 sm:p-7 pt-4 bg-[#070b1a]/90 border-t border-purple-500/15 space-y-4">
+                  <div className="p-5 sm:p-7 pt-4 bg-[#070b1a]/90 border-t border-purple-500/15 space-y-4">
                     <div className="flex flex-wrap gap-1.5 min-h-[52px] content-start">
                       {project.technologies.map((tech) => (
                         <span
@@ -300,7 +300,7 @@ export const Projects: React.FC = () => {
           </div>
         ) : (
           /* View Mode: Responsive 3-Column Grid */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
             {filteredProjects.map((project, idx) => (
               <div
                 key={project.id}
@@ -311,7 +311,7 @@ export const Projects: React.FC = () => {
                   #{String(idx + 1).padStart(2, '0')}
                 </div>
 
-                <div className="p-6 sm:p-7 space-y-4">
+                <div className="p-5 sm:p-7 space-y-3.5 sm:space-y-4">
                   <div className="flex items-center justify-between gap-2">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-semibold border ${getCategoryColor(
@@ -362,7 +362,7 @@ export const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-7 pt-4 bg-[#070b1a]/90 border-t border-purple-500/15 space-y-4">
+                <div className="p-5 sm:p-7 pt-4 bg-[#070b1a]/90 border-t border-purple-500/15 space-y-4">
                   <div className="flex flex-wrap gap-1.5">
                     {project.technologies.map((tech) => (
                       <span

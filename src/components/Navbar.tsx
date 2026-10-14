@@ -85,13 +85,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             })}
           </nav>
 
-          {/* Header Action Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* Header Action Buttons for Tablet & Desktop */}
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
             <a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg text-slate-200 bg-slate-900/80 border border-[#0a66c2]/40 hover:border-[#0a66c2] hover:bg-[#0a66c2]/20 hover:text-white transition-all duration-200"
+              className="hidden xl:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg text-slate-200 bg-slate-900/80 border border-[#0a66c2]/40 hover:border-[#0a66c2] hover:bg-[#0a66c2]/20 hover:text-white transition-all duration-200"
               title="LinkedIn Profile"
             >
               <svg className="w-3.5 h-3.5 fill-[#0a66c2]" viewBox="0 0 24 24">
@@ -104,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               href={personalInfo.resumePath}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg text-slate-200 bg-slate-900/80 border border-purple-500/30 hover:border-purple-400 hover:bg-slate-800/80 transition-all duration-200 group"
+              className="inline-flex items-center gap-1.5 px-3 lg:px-4 py-2 text-xs font-semibold rounded-lg text-slate-200 bg-slate-900/80 border border-purple-500/30 hover:border-purple-400 hover:bg-slate-800/80 transition-all duration-200 group"
               title="Open & View Navnath Resume PDF"
             >
               <FileDown className="w-3.5 h-3.5 text-purple-400 group-hover:translate-y-0.5 transition-transform" />
@@ -113,20 +113,21 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
             <a
               href="#contact"
-              className="relative inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-md shadow-purple-600/25 hover:shadow-purple-600/40 transition-all duration-200"
+              className="inline-flex items-center gap-1.5 px-3.5 lg:px-4 py-2 text-xs font-semibold rounded-lg text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-md shadow-purple-600/25 hover:shadow-purple-600/40 transition-all duration-200"
             >
               <Sparkles className="w-3.5 h-3.5 text-yellow-300 animate-pulse" />
-              <span>Let's Talk</span>
+              <span className="hidden sm:inline">Let's Talk</span>
+              <span className="sm:hidden">Talk</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-1.5">
             <a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-slate-300 hover:text-white bg-slate-900/70 rounded-lg border border-[#0a66c2]/40"
+              className="hidden xs:inline-flex p-2 text-slate-300 hover:text-white bg-slate-900/70 rounded-lg border border-[#0a66c2]/40"
               aria-label="LinkedIn Profile"
               title="LinkedIn Profile"
             >
@@ -139,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               href={personalInfo.resumePath}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-slate-300 hover:text-white bg-slate-900/70 rounded-lg border border-purple-500/20"
+              className="hidden xs:inline-flex p-2 text-slate-300 hover:text-white bg-slate-900/70 rounded-lg border border-purple-500/20"
               aria-label="Open Resume PDF"
               title="Open Resume PDF"
             >
@@ -161,7 +162,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
       {/* Mobile Menu Drawer */}
       {isOpen && (
-        <div className="md:hidden bg-[#070b1a]/95 backdrop-blur-xl border-b border-purple-500/20 px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top duration-200">
+        <div className="md:hidden bg-[#070b1a]/95 backdrop-blur-xl border-b border-purple-500/20 px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top duration-200 max-h-[85vh] overflow-y-auto">
           <div className="grid grid-cols-2 gap-1.5 mb-4">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);

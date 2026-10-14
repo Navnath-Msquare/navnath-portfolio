@@ -134,16 +134,16 @@ export const About: React.FC = () => {
             {/* Ambient Background Glow */}
             <div className="absolute -inset-1.5 bg-gradient-to-r from-purple-600/30 via-indigo-600/20 to-cyan-500/30 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-700 -z-10" />
 
-            <div className="rounded-3xl bg-[#090d1f]/90 border border-purple-500/25 p-6 backdrop-blur-xl shadow-2xl shadow-purple-950/40 space-y-5">
+            <div className="rounded-3xl bg-[#090d1f]/90 border border-purple-500/25 p-4 sm:p-6 backdrop-blur-xl shadow-2xl shadow-purple-950/40 space-y-5">
               {/* Developer Tech Identity Card (Replaces Photo) */}
-              <div className="relative rounded-2xl overflow-hidden border border-purple-500/40 shadow-inner group/img bg-gradient-to-b from-[#0b0f29] via-[#080c20] to-[#040612] p-5">
+              <div className="relative rounded-2xl overflow-hidden border border-purple-500/40 shadow-inner group/img bg-gradient-to-b from-[#0b0f29] via-[#080c20] to-[#040612] p-4 sm:p-5">
                 {/* Terminal Window Header */}
-                <div className="flex items-center justify-between pb-4 border-b border-purple-500/20">
+                <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-purple-500/20">
                   <div className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block" />
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
-                    <span className="text-[11px] font-mono text-purple-300/80 ml-2">navnath.identity</span>
+                    <span className="text-[11px] font-mono text-purple-300/80 ml-2 hidden xs:inline">navnath.identity</span>
                   </div>
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#030712]/85 text-emerald-300 border border-emerald-500/40">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
@@ -152,22 +152,22 @@ export const About: React.FC = () => {
                 </div>
 
                 {/* Center Hologram Avatar / Monogram */}
-                <div className="py-6 flex flex-col items-center justify-center text-center relative">
+                <div className="py-5 sm:py-6 flex flex-col items-center justify-center text-center relative">
                   <div className="relative">
-                    <div className="w-24 h-24 rounded-3xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-cyan-400 p-[2.5px] shadow-2xl shadow-purple-900/60 group-hover/img:scale-105 transition-transform duration-500">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-cyan-400 p-[2.5px] shadow-2xl shadow-purple-900/60 group-hover/img:scale-105 transition-transform duration-500">
                       <div className="w-full h-full bg-[#070b1e] rounded-[22px] flex flex-col items-center justify-center relative overflow-hidden">
                         <div className="absolute inset-0 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:12px_12px] opacity-25" />
-                        <span className="font-mono font-black text-3xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-indigo-200 to-cyan-300">
+                        <span className="font-mono font-black text-2xl sm:text-3xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-indigo-200 to-cyan-300">
                           NB
                         </span>
                         <span className="text-[9px] font-mono text-purple-400/90 -mt-0.5">&lt;Dev /&gt;</span>
                       </div>
                     </div>
-                    <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-400 ring-2 ring-[#070b1e]" />
+                    <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-emerald-400 ring-2 ring-[#070b1e]" />
                   </div>
 
-                  <div className="mt-4">
-                    <h4 className="text-lg font-bold text-white flex items-center justify-center gap-1.5">
+                  <div className="mt-3.5 sm:mt-4">
+                    <h4 className="text-base sm:text-lg font-bold text-white flex items-center justify-center gap-1.5">
                       <span>{personalInfo.name}</span>
                       <CheckCircle2 className="w-4 h-4 text-cyan-400 inline" />
                     </h4>
@@ -187,7 +187,7 @@ export const About: React.FC = () => {
                 </div>
 
                 {/* Code Snippet Box */}
-                <div className="p-3.5 rounded-xl bg-slate-950/80 border border-purple-500/20 font-mono text-[11px] leading-relaxed text-slate-300 space-y-1">
+                <div className="p-3 sm:p-3.5 rounded-xl bg-slate-950/80 border border-purple-500/20 font-mono text-[11px] leading-relaxed text-slate-300 space-y-1">
                   <div className="text-slate-500">// Core Philosophy</div>
                   <div>
                     <span className="text-purple-400">const</span> <span className="text-cyan-300">developer</span> = &#123;
@@ -207,35 +207,35 @@ export const About: React.FC = () => {
 
               {/* Quick Profile Summary Details */}
               <div className="space-y-3 pt-1">
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 text-xs">
+                  <div className="p-2.5 sm:p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
                     <div className="text-slate-400 text-[11px]">Primary Focus</div>
                     <div className="text-white font-semibold mt-0.5">React • Next.js • TS</div>
                   </div>
-                  <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                  <div className="p-2.5 sm:p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
                     <div className="text-slate-400 text-[11px]">Backend &amp; DB</div>
                     <div className="text-white font-semibold mt-0.5">PHP • MySQL • REST</div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 text-xs">
+                  <div className="p-2.5 sm:p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
                     <div className="text-slate-400 text-[11px]">Deployments</div>
                     <div className="text-cyan-300 font-semibold mt-0.5">AWS &amp; Plesk Server</div>
                   </div>
-                  <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                  <div className="p-2.5 sm:p-3 rounded-xl bg-slate-900/60 border border-slate-800/80">
                     <div className="text-slate-400 text-[11px]">Education</div>
                     <div className="text-purple-300 font-semibold mt-0.5">B.Tech (7.5 CGPA)</div>
                   </div>
                 </div>
 
                 {/* Quick Profile CTAs */}
-                <div className="flex items-center gap-2 pt-2">
+                <div className="flex flex-col xs:flex-row items-center gap-2 pt-2">
                   <a
                     href={personalInfo.resumePath}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-semibold text-white bg-purple-600 hover:bg-purple-500 border border-purple-400/40 shadow-md shadow-purple-950/40 transition-colors"
+                    className="w-full xs:flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-semibold text-white bg-purple-600 hover:bg-purple-500 border border-purple-400/40 shadow-md shadow-purple-950/40 transition-colors"
                   >
                     <FileDown className="w-3.5 h-3.5" />
                     <span>View Resume PDF</span>
@@ -245,7 +245,7 @@ export const About: React.FC = () => {
                     href={personalInfo.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-semibold text-slate-200 bg-[#0a66c2]/20 hover:bg-[#0a66c2]/40 border border-[#0a66c2]/40 transition-colors"
+                    className="w-full xs:w-auto inline-flex items-center justify-center gap-1.5 py-2.5 px-3.5 rounded-xl text-xs font-semibold text-slate-200 bg-[#0a66c2]/20 hover:bg-[#0a66c2]/40 border border-[#0a66c2]/40 transition-colors"
                     title="Connect on LinkedIn"
                   >
                     <svg className="w-3.5 h-3.5 fill-[#0a66c2]" viewBox="0 0 24 24">
@@ -260,7 +260,7 @@ export const About: React.FC = () => {
 
           {/* Right Column: Detailed Biography Card + 4 Pillars Grid */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-7 backdrop-blur-xl shadow-xl shadow-purple-950/20 space-y-4">
+            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-5 sm:p-7 backdrop-blur-xl shadow-xl shadow-purple-950/20 space-y-4">
               <h3 className="text-xl font-bold text-white flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-purple-400" />
                 <span>Professional Summary &amp; Background</span>

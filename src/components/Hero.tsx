@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] pt-32 pb-20 flex items-center justify-center overflow-hidden"
+      className="relative min-h-[90vh] pt-24 sm:pt-32 pb-16 sm:pb-20 flex items-center justify-center overflow-hidden"
     >
       {/* Background glowing orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[130px] pointer-events-none -z-10" />
@@ -39,11 +39,11 @@ export const Hero: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Introduction & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             {/* Status Pills & Profile Avatar Badge */}
-            <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+            <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2">
               <a
                 href="#about"
                 className="inline-flex items-center gap-2 pl-1.5 pr-3 py-1 rounded-full text-xs font-medium bg-slate-900/90 text-slate-200 border border-purple-500/40 hover:border-purple-400 backdrop-blur-md shadow-md shadow-purple-950/40 transition-all group"
@@ -63,23 +63,23 @@ export const Hero: React.FC = () => {
                 </span>
               </a>
 
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-emerald-950/60 text-emerald-300 border border-emerald-500/30 backdrop-blur-md">
+              <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-medium bg-emerald-950/60 text-emerald-300 border border-emerald-500/30 backdrop-blur-md">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
                 </span>
-                {personalInfo.availability}
+                <span>{personalInfo.availability}</span>
               </span>
 
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-slate-900/70 text-slate-300 border border-slate-700/60 backdrop-blur-md">
-                <MapPin className="w-3.5 h-3.5 text-purple-400" />
-                {personalInfo.location}
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-medium bg-slate-900/70 text-slate-300 border border-slate-700/60 backdrop-blur-md">
+                <MapPin className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+                <span>{personalInfo.location}</span>
               </span>
             </div>
 
             {/* Main Title & Subtitle */}
             <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12]">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12]">
                 Hi, I'm{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-300">
                   {personalInfo.name}
@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
 
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <span className="h-[2px] w-8 bg-gradient-to-r from-purple-500 to-indigo-500 hidden sm:inline-block" />
-                <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-200">
+                <h2 className="text-base sm:text-xl md:text-2xl font-semibold text-slate-200">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-200">
                     Full Stack Developer
                   </span>{' '}
@@ -101,7 +101,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Introduction Paragraph */}
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Specializing in scalable frontend and full-stack development with{' '}
               <strong className="text-purple-300 font-semibold">React.js</strong>,{' '}
               <strong className="text-purple-300 font-semibold">Next.js</strong>, and{' '}
@@ -111,10 +111,10 @@ export const Hero: React.FC = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:via-indigo-500 hover:to-blue-500 shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:via-indigo-500 hover:to-blue-500 shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
               >
                 <span>Explore My Work</span>
                 <ArrowRight className="w-4 h-4" />
@@ -124,7 +124,7 @@ export const Hero: React.FC = () => {
                 href={personalInfo.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-200 bg-slate-900/90 border border-purple-500/40 hover:border-purple-400 hover:bg-slate-800/90 hover:text-white shadow-md shadow-purple-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
+                className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-sm font-semibold text-slate-200 bg-slate-900/90 border border-purple-500/40 hover:border-purple-400 hover:bg-slate-800/90 hover:text-white shadow-md shadow-purple-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 group"
                 title="Open & View Navnath Resume PDF"
               >
                 <FileDown className="w-4 h-4 text-purple-400 group-hover:translate-y-0.5 transition-transform" />
@@ -133,7 +133,7 @@ export const Hero: React.FC = () => {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-medium text-slate-300 bg-slate-900/50 border border-slate-800 hover:border-slate-700 hover:text-white hover:bg-slate-800/50 transition-all duration-200"
+                className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 sm:py-3.5 rounded-xl text-sm font-medium text-slate-300 bg-slate-900/50 border border-slate-800 hover:border-slate-700 hover:text-white hover:bg-slate-800/50 transition-all duration-200"
               >
                 <Send className="w-4 h-4 text-cyan-400" />
                 <span>Contact Me</span>
@@ -143,7 +143,7 @@ export const Hero: React.FC = () => {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl font-semibold text-slate-200 bg-[#0a66c2]/15 border border-[#0a66c2]/40 hover:bg-[#0a66c2]/30 hover:border-[#0a66c2] hover:text-white transition-all duration-200 group"
+                className="w-full xs:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 sm:py-3.5 rounded-xl text-sm font-semibold text-slate-200 bg-[#0a66c2]/15 border border-[#0a66c2]/40 hover:bg-[#0a66c2]/30 hover:border-[#0a66c2] hover:text-white transition-all duration-200 group"
                 title="View Navnath Bandgar's LinkedIn Profile"
               >
                 <svg className="w-4 h-4 fill-[#0a66c2] group-hover:fill-white transition-colors" viewBox="0 0 24 24">
@@ -154,18 +154,18 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Quick Email Copy & Highlights */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400">
+            <div className="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-xs text-slate-400">
               <button
                 onClick={handleCopyEmail}
-                className="inline-flex items-center gap-1.5 hover:text-purple-300 transition-colors focus:outline-none cursor-pointer"
+                className="inline-flex items-center gap-1.5 hover:text-purple-300 transition-colors focus:outline-none cursor-pointer max-w-[240px] sm:max-w-none truncate"
                 title="Click to copy email address"
               >
                 {copiedEmail ? (
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
+                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 ) : (
-                  <Copy className="w-3.5 h-3.5 text-slate-400" />
+                  <Copy className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 )}
-                <span>{copiedEmail ? 'Copied to clipboard!' : personalInfo.email}</span>
+                <span className="truncate">{copiedEmail ? 'Copied to clipboard!' : personalInfo.email}</span>
               </button>
 
               <a
@@ -181,35 +181,35 @@ export const Hero: React.FC = () => {
                 <span>navnath-b-8a5aba241</span>
               </a>
 
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-purple-400" />
-                <span>B.Tech CSE Graduate (2024)</span>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+                <span>B.Tech CSE '24</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Developer Themed Interactive IDE / Visual Component */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative w-full">
             {/* Ambient background glow behind terminal */}
             <div className="absolute -inset-1.5 bg-gradient-to-r from-purple-600/30 via-indigo-600/20 to-cyan-500/30 rounded-2xl blur-xl opacity-75 -z-10 group-hover:opacity-100 transition duration-1000" />
 
-            <div className="relative rounded-2xl bg-[#090d1f]/95 border border-purple-500/30 shadow-2xl shadow-purple-950/60 overflow-hidden backdrop-blur-xl">
+            <div className="relative rounded-2xl bg-[#090d1f]/95 border border-purple-500/30 shadow-2xl shadow-purple-950/60 overflow-hidden backdrop-blur-xl w-full">
               {/* Terminal Window Header */}
-              <div className="flex items-center justify-between px-4 py-3 bg-[#0c1228] border-b border-purple-500/20">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                  <span className="ml-2 text-xs font-mono text-slate-400 hidden sm:inline-block">
-                    navnath-dev-workspace
+              <div className="flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 bg-[#0c1228] border-b border-purple-500/20 gap-2">
+                <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-rose-500/80" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-500/80" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500/80" />
+                  <span className="ml-1 text-[11px] font-mono text-slate-400 hidden xl:inline-block">
+                    navnath-workspace
                   </span>
                 </div>
 
-                {/* Tabs */}
-                <div className="flex items-center gap-1">
+                {/* Tabs with Horizontal Scroll */}
+                <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5 max-w-[280px] xs:max-w-none">
                   <button
                     onClick={() => setActiveTab('profile')}
-                    className={`px-2.5 py-1 rounded text-xs font-mono transition-colors flex items-center gap-1 ${
+                    className={`px-2 sm:px-2.5 py-1 rounded text-[11px] sm:text-xs font-mono transition-colors flex items-center gap-1 shrink-0 ${
                       activeTab === 'profile'
                         ? 'bg-purple-600/30 text-purple-300 border border-purple-500/40'
                         : 'text-slate-400 hover:text-slate-200'
@@ -220,7 +220,7 @@ export const Hero: React.FC = () => {
                   </button>
                   <button
                     onClick={() => setActiveTab('developer')}
-                    className={`px-2.5 py-1 rounded text-xs font-mono transition-colors ${
+                    className={`px-2 sm:px-2.5 py-1 rounded text-[11px] sm:text-xs font-mono transition-colors shrink-0 ${
                       activeTab === 'developer'
                         ? 'bg-purple-600/30 text-purple-300 border border-purple-500/40'
                         : 'text-slate-400 hover:text-slate-200'
@@ -230,7 +230,7 @@ export const Hero: React.FC = () => {
                   </button>
                   <button
                     onClick={() => setActiveTab('stack')}
-                    className={`px-2.5 py-1 rounded text-xs font-mono transition-colors ${
+                    className={`px-2 sm:px-2.5 py-1 rounded text-[11px] sm:text-xs font-mono transition-colors shrink-0 ${
                       activeTab === 'stack'
                         ? 'bg-purple-600/30 text-purple-300 border border-purple-500/40'
                         : 'text-slate-400 hover:text-slate-200'
@@ -240,7 +240,7 @@ export const Hero: React.FC = () => {
                   </button>
                   <button
                     onClick={() => setActiveTab('architecture')}
-                    className={`px-2.5 py-1 rounded text-xs font-mono transition-colors ${
+                    className={`px-2 sm:px-2.5 py-1 rounded text-[11px] sm:text-xs font-mono transition-colors shrink-0 ${
                       activeTab === 'architecture'
                         ? 'bg-purple-600/30 text-purple-300 border border-purple-500/40'
                         : 'text-slate-400 hover:text-slate-200'
@@ -450,7 +450,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Floating micro badges around visual */}
-            <div className="absolute -bottom-5 -left-4 bg-[#0d142f]/90 backdrop-blur-md border border-purple-500/30 rounded-xl px-3.5 py-2 shadow-lg shadow-purple-950/50 flex items-center gap-2.5 hidden sm:flex">
+            <div className="absolute -bottom-5 -left-4 bg-[#0d142f]/90 backdrop-blur-md border border-purple-500/30 rounded-xl px-3.5 py-2 shadow-lg shadow-purple-950/50 flex items-center gap-2.5 hidden lg:flex">
               <div className="p-1.5 rounded-lg bg-purple-600/20 text-purple-400">
                 <Code2 className="w-4 h-4" />
               </div>
@@ -460,7 +460,7 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            <div className="absolute -top-4 -right-4 bg-[#0d142f]/90 backdrop-blur-md border border-cyan-500/30 rounded-xl px-3.5 py-2 shadow-lg shadow-cyan-950/50 flex items-center gap-2.5 hidden sm:flex">
+            <div className="absolute -top-4 -right-4 bg-[#0d142f]/90 backdrop-blur-md border border-cyan-500/30 rounded-xl px-3.5 py-2 shadow-lg shadow-cyan-950/50 flex items-center gap-2.5 hidden lg:flex">
               <div className="p-1.5 rounded-lg bg-cyan-600/20 text-cyan-400">
                 <Cpu className="w-4 h-4" />
               </div>

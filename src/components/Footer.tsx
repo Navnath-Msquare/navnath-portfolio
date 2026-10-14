@@ -25,9 +25,9 @@ export const Footer: React.FC = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-24 bg-purple-600/10 blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800/80">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800/80">
           {/* Brand Column */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="sm:col-span-2 md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <div className="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-cyan-400 p-[1.5px] shadow-md shadow-purple-950/40 shrink-0">
                 <div className="w-full h-full bg-[#070b19] rounded-[10px] overflow-hidden flex items-center justify-center font-mono font-black text-xs text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-cyan-300">
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links Column */}
-          <div className="md:col-span-4 space-y-4">
+          <div className="sm:col-span-1 md:col-span-4 space-y-4">
             <h4 className="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold">
               Navigation
             </h4>
@@ -107,7 +107,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Action Column */}
-          <div className="md:col-span-3 flex flex-col justify-between items-start md:items-end space-y-4">
+          <div className="sm:col-span-1 md:col-span-3 flex flex-col justify-between items-start sm:items-end space-y-4">
             <div className="space-y-2 md:text-right">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/70 text-emerald-300 border border-emerald-500/30">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />

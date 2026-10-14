@@ -92,7 +92,7 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Direct Email Card */}
-            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-6 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 group">
+            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-4 sm:p-6 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 group">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3.5">
                   <div className="w-12 h-12 rounded-xl bg-purple-600/15 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover:scale-105 transition-transform">
@@ -139,7 +139,7 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Direct Phone Card */}
-            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-6 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 group">
+            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-4 sm:p-6 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 group">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3.5">
                   <div className="w-12 h-12 rounded-xl bg-indigo-600/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform">
@@ -186,7 +186,7 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Location & Social Card */}
-            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-6 backdrop-blur-xl shadow-xl shadow-purple-950/20 space-y-4">
+            <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-4 sm:p-6 backdrop-blur-xl shadow-xl shadow-purple-950/20 space-y-4">
               <div className="flex items-center gap-3.5">
                 <div className="w-12 h-12 rounded-xl bg-cyan-600/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
                   <MapPin className="w-6 h-6" />
@@ -235,7 +235,7 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Resume Download Feature Card */}
-            <div className="rounded-2xl bg-gradient-to-r from-purple-950/50 via-indigo-950/40 to-blue-950/50 border border-purple-500/30 p-6 backdrop-blur-md shadow-xl flex items-center justify-between gap-4">
+            <div className="rounded-2xl bg-gradient-to-r from-purple-950/50 via-indigo-950/40 to-blue-950/50 border border-purple-500/30 p-4 sm:p-6 backdrop-blur-md shadow-xl flex flex-col xs:flex-row items-start xs:items-center justify-between gap-3 sm:gap-4">
               <div className="space-y-1">
                 <h4 className="text-sm font-bold text-white flex items-center gap-1.5">
                   <Sparkles className="w-4 h-4 text-yellow-300" />
@@ -250,7 +250,7 @@ export const Contact: React.FC = () => {
                 href={personalInfo.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-purple-600 hover:bg-purple-500 shadow-md shadow-purple-600/30 transition-all shrink-0"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-purple-600 hover:bg-purple-500 shadow-md shadow-purple-600/30 transition-all shrink-0 w-full xs:w-auto justify-center"
                 title="Open & View Navnath Resume PDF"
               >
                 <FileDown className="w-4 h-4" />
@@ -260,7 +260,7 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Right Column: Contact Message Form */}
-          <div className="lg:col-span-7 rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-8 backdrop-blur-xl shadow-xl shadow-purple-950/20">
+          <div className="lg:col-span-7 rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-5 sm:p-7 md:p-8 backdrop-blur-xl shadow-xl shadow-purple-950/20">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-purple-600/15 border border-purple-500/30 flex items-center justify-center text-purple-400">
                 <MessageSquare className="w-5 h-5" />

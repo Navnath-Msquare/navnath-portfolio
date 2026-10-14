@@ -37,7 +37,7 @@ export const Education: React.FC = () => {
           {educationList.map((edu, idx) => (
             <div
               key={edu.id}
-              className={`rounded-2xl bg-[#090d1f]/90 border p-6 sm:p-8 backdrop-blur-xl shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+              className={`rounded-2xl bg-[#090d1f]/90 border p-5 sm:p-7 md:p-8 backdrop-blur-xl shadow-xl transition-all duration-300 hover:-translate-y-1 ${
                 idx === 0
                   ? 'border-purple-500/40 shadow-purple-950/30 bg-gradient-to-r from-[#0d1330] to-[#090d1f]'
                   : 'border-purple-500/15 shadow-purple-950/10'

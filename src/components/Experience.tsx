@@ -36,23 +36,23 @@ export const Experience: React.FC = () => {
         {/* Vertical Timeline */}
         <div className="relative">
           {/* Vertical Glowing Line */}
-          <div className="absolute left-4 md:left-8 top-4 bottom-4 w-0.5 bg-gradient-to-b from-purple-500 via-indigo-500 to-cyan-400 opacity-40" />
+          <div className="absolute left-3.5 sm:left-4 md:left-8 top-4 bottom-4 w-0.5 bg-gradient-to-b from-purple-500 via-indigo-500 to-cyan-400 opacity-40" />
 
-          <div className="space-y-12">
+          <div className="space-y-10 sm:space-y-12">
             {experiences.map((exp, index) => (
               <div
                 key={exp.id}
-                className="relative pl-12 md:pl-20 group"
+                className="relative pl-8 sm:pl-12 md:pl-20 group"
               >
                 {/* Timeline Node Icon */}
-                <div className="absolute left-2.5 md:left-6.5 top-1.5 -translate-x-1/2 w-8 h-8 rounded-full bg-[#0a0f26] border-2 border-purple-400 flex items-center justify-center text-purple-300 shadow-md shadow-purple-600/30 group-hover:scale-110 group-hover:border-cyan-300 group-hover:text-cyan-300 transition-all duration-300">
-                  <div className="w-2.5 h-2.5 rounded-full bg-purple-400 group-hover:bg-cyan-300 transition-colors" />
+                <div className="absolute left-3.5 sm:left-4 md:left-8 top-2 -translate-x-1/2 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#0a0f26] border-2 border-purple-400 flex items-center justify-center text-purple-300 shadow-md shadow-purple-600/30 group-hover:scale-110 group-hover:border-cyan-300 group-hover:text-cyan-300 transition-all duration-300">
+                  <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-purple-400 group-hover:bg-cyan-300 transition-colors" />
                 </div>
 
                 {/* Experience Card */}
-                <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-6 sm:p-8 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 hover:-translate-y-1">
+                <div className="rounded-2xl bg-[#090d1f]/90 border border-purple-500/20 p-4 sm:p-6 md:p-8 backdrop-blur-xl shadow-xl shadow-purple-950/20 hover:border-purple-400/40 transition-all duration-300 hover:-translate-y-1">
                   {/* Card Header */}
-                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-4 mb-4">
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-1.5">
                         <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-950/80 text-purple-300 border border-purple-500/30">
@@ -66,7 +66,7 @@ export const Experience: React.FC = () => {
                         )}
                       </div>
 
-                      <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
                         {exp.role}
                       </h3>
 
