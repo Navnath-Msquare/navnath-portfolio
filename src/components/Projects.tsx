@@ -39,14 +39,22 @@ export const Projects: React.FC = () => {
     }
   };
 
+  const tickingRef = useRef(false);
+
   const handleScroll = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      const maxScroll = scrollWidth - clientWidth;
-      const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
-      setScrollProgress(progress);
-      setCanScrollLeft(scrollLeft > 20);
-      setCanScrollRight(scrollLeft < maxScroll - 20);
+    if (!tickingRef.current && scrollContainerRef.current) {
+      window.requestAnimationFrame(() => {
+        if (scrollContainerRef.current) {
+          const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+          const maxScroll = scrollWidth - clientWidth;
+          const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
+          setScrollProgress(progress);
+          setCanScrollLeft(scrollLeft > 20);
+          setCanScrollRight(scrollLeft < maxScroll - 20);
+        }
+        tickingRef.current = false;
+      });
+      tickingRef.current = true;
     }
   };
 

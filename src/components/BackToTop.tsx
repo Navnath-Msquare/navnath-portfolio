@@ -5,15 +5,19 @@ export const BackToTop: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const toggleVisible = () => {
-      if (window.scrollY > 350) {
-        setVisible(true);
-      } else {
-        setVisible(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isVisible = window.scrollY > 350;
+          setVisible((prev) => (prev !== isVisible ? isVisible : prev));
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', toggleVisible);
+    window.addEventListener('scroll', toggleVisible, { passive: true });
     return () => window.removeEventListener('scroll', toggleVisible);
   }, []);
 
